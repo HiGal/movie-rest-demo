@@ -1,0 +1,90 @@
+{{>header}}
+<div class="container my-2">
+    <div class="container bg-white shadow p-3 mb-5 bg-white rounded">
+        {{#result}}
+        <div class="row">
+            <div class="col-4">
+                <img class="rounded-lg shadow p-3 mb-5 bg-white rounded"
+                     src="{{Poster}}">
+                <div class="col-4">
+                    <table class="ml-4 ml-md-auto table table-borderless">
+                        <thead>
+                        <tr>
+                            <th scope="col">
+                                <img class="my-2"
+                                     src="https://upload.wikimedia.org/wikipedia/commons/6/6a/New-imdb-logo.png"
+                                     width="50px">
+                            </th>
+                            <th scope="col"><img
+                                    class="my-2"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/1009px-Rotten_Tomatoes.svg.png"
+                                    width="30px">
+                            </th>
+                            <th scope="col"><img src="https://www.metacritic.com/images/icons/dark_logo.png"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            {{#Ratings}}
+                            {{#Value}}
+                            <td><b>{{Value}}<b></td>
+                            {{/Value}}
+                            {{/Ratings}}
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-8">
+                <h1 class="mx-4 mx-md-5">{{title}}</h1>
+                <table class="table table-borderless my-4 mx-4 mx-md-5 col-8">
+                    <tr>
+                        {{#Year}}
+                        <th scope="row">Year</th>
+                        <td>{{Year}}</td>
+                        {{/Year}}
+                    </tr>
+                    <tr>
+                        {{#Country}}
+                        <th scope="row">Country</th>
+                        <td>{{Country}}</td>
+                        {{/Country}}
+                    </tr>
+                    <tr>
+                        {{#Director}}
+                        <th scope="row">Director</th>
+                        <td>{{Director}}</td>
+                        {{/Director}}
+                    </tr>
+                    <tr>
+                        {{#Writer}}
+                        <th scope="row">Writer</th>
+                        <td>{{Writer}}</td>
+                        {{/Writer}}
+                    </tr>
+                    <tr>
+                        {{#Actors}}
+                        <th scope="row">Actors</th>
+                        <td>{{Actors}}</td>
+                        {{/Actors}}
+                    </tr>
+                    <tr>
+                        {{#Plot}}
+                        <th scope="row">Plot</th>
+                        <td>{{Plot}}</td>
+                        {{/Plot}}
+                    </tr>
+                    <tr>
+                        {{#BoxOffice}}
+                        <th scope="row">Box Office</th>
+                        <td>{{BoxOffice}}</td>
+                        {{/BoxOffice}}
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    {{/result}}
+</div>
+{{>footer}}
